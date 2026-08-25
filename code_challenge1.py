@@ -1,0 +1,3 @@
+bahay = "\t\t\t\t\t\t\t\t\t\t\t\t\t* \n\t\t\t\t\t\t\t\t\t\t\t\t*\t\t* \n\t\t\t\t\t\t\t\t\t\t\t* \t\t\t\t* \n\t\t\t\t\t\t\t\t\t\t* \t Hi my name is \t\t* \n\t\t\t\t\t\t\t\t\t\t**\t Jairus Ashleigh   ** \n\t\t\t\t\t\t\t\t\t\t**\t M. Gracio from    ** \n\t\t\t\t\t\t\t\t\t\t**\t\t BSIT 1B       ** \n\t\t\t\t\t\t\t\t\t\t************************* \n\t\t\t\t\t\t\t\t\t\t*************************"
+
+print(bahay)
