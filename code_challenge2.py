@@ -1,4 +1,5 @@
-bal = 19233
+print("=========bank ni aj==============")
+bal = eval(input("deposit money ===> "))
 print("bank balance:", bal )
 
 #computaion
@@ -30,3 +31,4 @@ print("20 =",p20)
 print("10 =",p10)
 print("5 =",p5)
 print("1 =",p1)
+print("======end of breakdown==========")
