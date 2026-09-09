@@ -1,4 +1,4 @@
-heya im Jairus Ashleigh M. Gracio, student id 14541 currently enrolled at Dalubhasaan ng Lungsod ng Lucena. im in github as it is required for school stuff
+heya im Jairus Ashleigh M. Gracio, student id 026A-14541 currently enrolled at Dalubhasaan ng Lungsod ng Lucena. im in github as it is required for school stuff
 im open to tips and to learn more to programming.
 
 This repository contains my coursework for ITCS102, including programming exercises, mini-projects, and notes. 
