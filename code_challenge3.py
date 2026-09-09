@@ -13,7 +13,7 @@ internaional = input("international? (y/n): ")
 base_cost = (weight*2.50)+(distance*0.15)
 total = base_cost
 
-if weight <= 2 or distance <= 1000:
+if weight <= 2 or distance <= 100:
     add = 0.00
 elif (express == "y" or express == "yes") and (internaional == "y" or internaional == "yes"):
     add = (total * 1.40)+50
