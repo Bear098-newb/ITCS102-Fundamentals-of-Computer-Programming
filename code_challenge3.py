@@ -8,20 +8,20 @@ print("other information")
 weight = float(input("weight{kg}"))
 distance = float(input("distance{km}"))
 express = input("express? (y/n): ")
-internaional = input("international? (y/n): ")
+international = input("international? (y/n): ")
 
 base_cost = (weight*2.50)+(distance*0.15)
 total = base_cost
 
 if weight <= 2 or distance <= 100:
     add = 0.00
-elif (express == "y" or express == "yes") and (internaional == "y" or internaional == "yes"):
+elif (express == "y" or express == "yes") and (international == "y" or international == "yes"):
     add = (total * 1.40)+50
-elif express =="y" or express == "yes" or internaional == "y" or internaional == "yes" or weight > 20:
+elif express =="y" or express == "yes" or international == "y" or international == "yes" or weight > 20:
     add = (total*1.20)+25
 elif weight > 30 or distance > 1000:
     add = total + 30
-elif express == "n" or "no" and internaional == "n" or internaional == "no":
+elif express == "n" or "no" and international == "n" or international == "no":
     add = total
 else :
     print("error")
