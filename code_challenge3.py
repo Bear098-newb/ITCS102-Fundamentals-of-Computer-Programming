@@ -26,7 +26,7 @@ else:
 
 print()
 print("----overall review-----")
-print("base cost : PHP",total)
-print("sender:",name,"\nitem type: ",item_type,"\ntotal cost: PHP", add)
+print()
+print("sender:",name,"\nitem type: ",item_type,"\nbase cost : PHP",total,"\ntotal cost: PHP", add)
 print()
 print("if the outcome is same please use True or False with a uppercase letter on ONLY the first letter")
