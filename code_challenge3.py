@@ -9,9 +9,7 @@ print("\n=====other information======")
 weight = float(input("weight in kg: "))
 distance = float(input("distance in km: "))
 isExpress = bool(input("is this express delivery? True or False: "))
-#isExpress = express in ["y", "yes"]
 isInternational = bool(input("is delivery from international? True or False: "))
-#isInternational = international in ["y","yes"]
 base_cost = (weight*2.50)+(distance*0.15)
 total = base_cost
 
