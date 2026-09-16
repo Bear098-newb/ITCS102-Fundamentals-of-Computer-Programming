@@ -1,10 +1,12 @@
+import getpass
+
 print("create an account to continue.")
 name = input("create a username: ")
 passwrd = input("create a password: ")
 print()
 print("Log in")
 logname = input("username: ")
-logpasswrd = input("password: ")
+logpasswrd = getpass.getpass("password: ")
 print()
 if logname == name and logpasswrd == passwrd:
     print("continue")
@@ -19,39 +21,47 @@ job = input("tell me about your job description: ")
 credit_score = eval(input("what is your credit score: "))
 annual_income = eval(input("what is your yearly income: "))
 has_collateral = bool(input("do you have a colateral? (y/n): ") == "y")
+collateral = input("describe your collateral (motorcycle, land etc): ")
+value = eval(input("what is the value of your collateral: "))
 print()
 loan = eval(input("how much do you want to loan: "))
-
+print()
 
 if has_collateral == True:
-    collateral = input("describe your collateral (motorcycle, land etc): ")
-    value = eval(input("what is the value of your collateral: "))
     if value >= 30000:
         print("loading")
     else:
-        print("value less than 30k. invalid")
+        print("value less than minimum invalid")
+        exit()
 else:
     print("no collateral.")
 
 if is_employed == True and age >= 21 and age <= 65:
     if credit_score >= 750:
         if annual_income >= 100000:
-            product = "APPROVED at 4.5% interest"
+            product = 4.5
         else:
-            product = "APPROVED at 5.0% interest"
+            product = 5.0
     elif credit_score >= 600 and credit_score < 750:
         if annual_income <= 40000:
-            product = "APPROVED at 9.5% interest"
+            product = 9.5
         elif has_collateral == True:
-            product = "APPROVED at 7.0% interest"
+            product = 7.0
         else :
-            product = "APPROVED at 8.0% interest"
+            product = 8.0
     else:
         product = "rejected: credit score too low"
 else:
     product = "DENIED: failed baseline criteria"
 
-Interest = loan/product
-total = Interest+product
+Interest = loan//product
+total = Interest+loan
 print()
-print(name,)
+print("name:" ,name)
+print("age:", age)
+print("job:", job)
+print("collateral:",collateral)
+print("interest rate:", product, "%")
+print("loan:",loan)
+print("interest:",Interest)
+print("total:" ,total)
