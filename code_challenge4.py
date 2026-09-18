@@ -1,40 +1,36 @@
 import getpass
 
-print("create an account to continue.")
-name = input("create a username: ")
-passwrd = input("create a password: ")
-print()
-print("Log in")
-logname = input("username: ")
-logpasswrd = getpass.getpass("password: ")
-print()
-if logname == name and logpasswrd == passwrd:
-    print("continue")
+username = "aj"
+password = "pogi123"
+print("Log In")
+user_login = input("user name: ")
+user_password = getpass.getpass("password: ")
+ 
+if user_login == username and user_password == password:
+    print("\nloading \n")
 else:
-    print("wrong credentials try again.")
+    print("wrong username and password.")
     exit()
-print()
-name = input("what is your full name: ")
-age = eval(input("what is your age: "))
-is_employed = bool(input("are you employed (y/n): ") == "y")
-job = input("tell me about your job description: ")
-credit_score = eval(input("what is your credit score: "))
-annual_income = eval(input("what is your yearly income: "))
-has_collateral = bool(input("do you have a colateral? (y/n): ") == "y")
-collateral = input("describe your collateral (motorcycle, land etc): ")
-value = eval(input("what is the value of your collateral: "))
-print()
-loan = eval(input("how much do you want to loan: "))
-print()
+print("personal information:")
+name = input("enter Full Name: ")
+age = eval(input("enter age: "))
+is_employed = bool(input("are you employed (yes/no): ") == "yes")
+job = input("what is your job: ")
+annual_income = eval(input("annual income: "))
+credit_score = eval(input("credit_score: "))
+has_collateral = bool(input("do you have collateral(yes/no): ") == "yes" )
+typee = input("whats your collateral (land, vehicle, jewelry, etc..): ")
+value = eval(input("value your collateral: "))
+loan = eval(input("how much is your loan:PHP  "))
 
 if has_collateral == True:
     if value >= 30000:
-        print("loading")
+        print("collateral Valid")
     else:
-        print("value less than minimum invalid")
+        print("collateral Invalid")
         exit()
 else:
-    print("no collateral.")
+    print("no collateral")
 
 if is_employed == True and age >= 21 and age <= 65:
     if credit_score >= 750:
@@ -54,14 +50,8 @@ if is_employed == True and age >= 21 and age <= 65:
 else:
     product = "DENIED: failed baseline criteria"
 
-Interest = loan//product
+Interest = loan/product
 total = Interest+loan
-print()
-print("name:" ,name)
-print("age:", age)
-print("job:", job)
-print("collateral:",collateral)
-print("interest rate:", product, "%")
-print("loan:",loan)
-print("interest:",Interest)
-print("total:" ,total)
+    
+print("\noverview:\n")
+print("name:", name ,"\nage:", age, "\nJob:", job, "\ncollateral:", typee, "\ninterest rate:",product,"%","\nloan:PHP", loan, "\ninterest:",Interest,"\n\ntotal:PHP",total)
