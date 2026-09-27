@@ -31,7 +31,7 @@ sub_total = price*quantity
 if is_onsale == "yes":
     if sub_total >= 5000:
         discount = 0.15
-    elif sub_total < 5000 or sub_total > 2000:
+    elif sub_total < 5000 and sub_total > 2000:
         discount = 0.10
     else:
         discount = 0.05
@@ -51,9 +51,9 @@ else:
 
 if distance <= 10:
     d_fee = 50
-elif distance <=30 and distance >= 10:
+elif distance <= 30:
     d_fee = 100
-elif distance <= 50 and distance >= 30:
+elif distance <= 50:
     d_fee = 150
 else:
     d_fee = 250
