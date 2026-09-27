@@ -28,10 +28,10 @@ distance = int(input("distance in kilometers: "))
 
 sub_total = price*quantity
 
-if is_onsale == "yes":
+if is_onsale == "yes" or "y":
     if sub_total >= 5000:
         discount = 0.15
-    elif sub_total < 5000 and sub_total > 2000:
+    elif sub_total < 5000 and sub_total >= 2000:
         discount = 0.10
     else:
         discount = 0.05
@@ -41,7 +41,7 @@ else:
 sub_total1 = sub_total*discount
 sub_total2 = sub_total-sub_total1
 
-if is_member == "yes":
+if is_member == "yes" or "y":
     if sub_total2 >= 3000:
         member_discount = 0.05
     else:
@@ -49,7 +49,10 @@ if is_member == "yes":
 else:
     member_discount = 0
 
-if distance <= 10:
+if distance < 0:
+    print("negative number detected")
+    exit()
+elif distance <= 10:
     d_fee = 50
 elif distance <= 30:
     d_fee = 100
