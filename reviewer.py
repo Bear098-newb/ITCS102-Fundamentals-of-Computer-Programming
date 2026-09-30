@@ -30,11 +30,12 @@ if owner_age >= 21 and years_in_business >= 2 and has_defaults == "no":
             print("REJECTED:collateral value too low")
             exit()
 
-        surcharge = max_loan*base_fee
+        fee = max_loan*base_fee
+        surcharge = 0
         if c_value%5000 != 0:
             surcharge += 250
         else:
-            surcharge == 0 
+            surcharge += 0 
     
     elif credit_score >= 620 and credit_score < 720:#tier2
         max_loan = revenue* 1.5
@@ -54,11 +55,12 @@ if owner_age >= 21 and years_in_business >= 2 and has_defaults == "no":
             print("REJECTED:collateral value too low")
             exit()
 
-        surcharge = max_loan*base_fee
+        fee = max_loan*base_fee
+        surcharge = 0
         if c_value%5000 != 0:
             surcharge += 250
         else:
-            surcharge == 0 
+            surcharge += 0 
     else: #tier3
         print("REJECTED: credit score too low")
         exit()
