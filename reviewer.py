@@ -29,6 +29,13 @@ if owner_age >= 21 and years_in_business >= 2 and has_defaults == "no":
         else:
             print("REJECTED:collateral value too low")
             exit()
+
+        surcharge = max_loan*base_fee
+        if c_value%5000 != 0:
+            surcharge += 250
+        else:
+            surcharge == 0 
+    
     elif credit_score >= 620 and credit_score < 720:#tier2
         max_loan = revenue* 1.5
         base_fee = 0.0
@@ -46,6 +53,12 @@ if owner_age >= 21 and years_in_business >= 2 and has_defaults == "no":
         else:
             print("REJECTED:collateral value too low")
             exit()
+
+        surcharge = max_loan*base_fee
+        if c_value%5000 != 0:
+            surcharge += 250
+        else:
+            surcharge == 0 
     else: #tier3
         print("REJECTED: credit score too low")
         exit()
@@ -53,10 +66,7 @@ else:
     print("REJECTED: failed bseline requirement")
     exit()
 
-surcharge = max_loan*base_fee %5000
-if surcharge != 0:
-    base_fee = base_fee + 250
-else:
-    base_fee = base_fee
+
+
 print("\n============OVERVIEW===========")
-print( "collateral: ",collateral, "\nmax loan: ₱",max_loan ,"\nloan: ₱",loan, "\nbase fee: ₱", base_fee)
+print( "collateral: ",collateral, "\nmax loan: ₱",max_loan ,"\nloan: ₱",loan, "\nbase fee: ₱", base_fee , "\nsurcharge fee:",surcharge)
