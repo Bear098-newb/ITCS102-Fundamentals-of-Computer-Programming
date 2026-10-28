@@ -1,9 +1,9 @@
-size = 5
+size =  int(input("size:"))
 
-for row in range(size):
-    for column in range(size):
-        if column == row or column == size - row - 1:
-            print("*", end="")
+for x in range(size):
+    for y in range(size):
+        if x + y == size-1 or x==y:
+            print("*", end = "")
         else:
             print(" ", end="")
     print()
