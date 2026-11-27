@@ -9,14 +9,14 @@ import pygame
 # ============================================================
 #  PART 1: GAME SETTINGS  (safe to change: start here!)
 # ============================================================
-GAME_TITLE = "Snake"
+GAME_TITLE = "talong ni joshua"
 CELL_SIZE = 25           # size of one square, in pixels
-GRID_WIDTH = 24          # how many squares across
-GRID_HEIGHT = 18         # how many squares down
-SPEED = 8                # moves per second: higher = faster snake
-START_LENGTH = 3         # how long the snake is at the start
-POINTS_PER_FOOD = 1      # score for each food eaten
-GROW_PER_FOOD = 1        # how many squares the snake grows per food
+GRID_WIDTH = 50         # how many squares across
+GRID_HEIGHT = 30        # how many squares down
+SPEED = 5               # moves per second: higher = faster snake
+START_LENGTH = 10         # how long the snake is at the start
+POINTS_PER_FOOD = 100      # score for each food eaten
+GROW_PER_FOOD = 10        # how many squares the snake grows per food
 WALLS_KILL = True        # False = snake goes through walls to the other side
 
 # Colors are (red, green, blue), each from 0 to 255
